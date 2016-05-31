@@ -10,11 +10,11 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="242px" Width="380px" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="549px" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                <asp:BoundField DataField="TItle" HeaderText="TItle" SortExpression="TItle" />
-                <asp:BoundField DataField="Earned_Money" HeaderText="Salary" SortExpression="Earned_Money" />
+                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                <asp:BoundField DataField="Money_Earned" HeaderText="Salary" SortExpression="Money_Earned" />
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -27,9 +27,9 @@
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDbaseConnectionString2 %>" SelectCommand="SELECT [Name], [TItle], [Earned Money] AS Earned_Money FROM [Employees] WHERE ([Earned Money] &gt; @Earned_Money) ORDER BY [Earned Money]">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDbaseConnectionString3 %>" SelectCommand="SELECT [Name], [Title], [Money Earned] AS Money_Earned FROM [Employees] WHERE ([Money Earned] &gt; @Money_Earned) ORDER BY [Money Earned]">
             <SelectParameters>
-                <asp:Parameter DefaultValue="250000" Name="Earned_Money" Type="Decimal" />
+                <asp:Parameter DefaultValue="100000" Name="Money_Earned" Type="Decimal" />
             </SelectParameters>
         </asp:SqlDataSource>
     </div>
