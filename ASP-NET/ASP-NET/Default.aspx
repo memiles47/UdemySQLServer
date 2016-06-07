@@ -12,10 +12,9 @@
     
         <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="549px" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
-                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-                <asp:BoundField DataField="Money_Earned" HeaderText="Salary" SortExpression="Money_Earned" />
+                <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
+                <asp:BoundField DataField="Avg Gross Sales" HeaderText="Avg Gross Sales" SortExpression="Avg Gross Sales" />
+                <asp:BoundField DataField="Avg Net Sales" HeaderText="Avg Net Sales" SortExpression="Avg Net Sales" />
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -27,5 +26,6 @@
             <SortedDescendingCellStyle BackColor="#F1E5CE" />
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDBaseConnectionString3 %>" SelectCommand="SELECT * FROM [AnnualSales]"></asp:SqlDataSource>
         <br />
         
