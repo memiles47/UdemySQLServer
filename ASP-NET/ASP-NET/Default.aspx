@@ -28,13 +28,4 @@
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDbaseConnectionString3 %>" SelectCommand="SELECT [Name], [Title], [Money Earned] AS Money_Earned FROM [Employees] WHERE ([Money Earned] &gt; @Money_Earned) ORDER BY [Money Earned]">
-            <SelectParameters>
-                <asp:Parameter DefaultValue="100000" Name="Money_Earned" Type="Decimal" />
-            </SelectParameters>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDBaseConnectionString3 %>" SelectCommand="SELECT * FROM [Employees]">
-        </asp:SqlDataSource>
-    </div>
-    </form>
-</body>
-</html>
+        
