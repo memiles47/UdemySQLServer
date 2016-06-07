@@ -10,12 +10,12 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="242px" Width="380px" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="Id">
+        <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="549px" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-                <asp:BoundField DataField="Money Earned" HeaderText="Money Earned" SortExpression="Money Earned" />
+                <asp:BoundField DataField="Money_Earned" HeaderText="Salary" SortExpression="Money_Earned" />
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -28,6 +28,10 @@
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
         <br />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDbaseConnectionString3 %>" SelectCommand="SELECT [Name], [Title], [Money Earned] AS Money_Earned FROM [Employees] WHERE ([Money Earned] &gt; @Money_Earned) ORDER BY [Money Earned]">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="100000" Name="Money_Earned" Type="Decimal" />
+            </SelectParameters>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myDBaseConnectionString3 %>" SelectCommand="SELECT * FROM [Employees]">
         </asp:SqlDataSource>
     </div>
