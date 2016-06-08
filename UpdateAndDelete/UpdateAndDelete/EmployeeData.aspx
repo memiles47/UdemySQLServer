@@ -13,7 +13,7 @@
         <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" DataSourceID="Employees" ForeColor="Black" Height="50px" Width="383px">
             <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
             <Fields>
-                <asp:TemplateField HeaderText="Id" SortExpression="Id">
+                <asp:TemplateField HeaderText="Employee Number" SortExpression="Id">
                     <EditItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
                     </EditItemTemplate>
@@ -35,7 +35,7 @@
                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="HireDate" SortExpression="HireDate">
+                <asp:TemplateField HeaderText="Hire Date" SortExpression="HireDate">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("HireDate") %>'></asp:TextBox>
                     </EditItemTemplate>
