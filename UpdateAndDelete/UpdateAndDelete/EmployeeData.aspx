@@ -10,7 +10,16 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="Id" DataSourceID="Employees" ForeColor="Black" Height="50px" Width="383px">
+        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" 
+            BackColor="#CCCCCC" 
+            BorderColor="#999999" 
+            BorderStyle="Solid" 
+            BorderWidth="3px" CellPadding="4" CellSpacing="2" 
+            DataKeyNames="Id" 
+            DataSourceID="Employees" 
+            ForeColor="Black" 
+            Height="50px" 
+            Width="383px">
             <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
             <Fields>
                 <asp:TemplateField HeaderText="Employee Number" SortExpression="Id">
@@ -64,7 +73,11 @@
             <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
             <RowStyle BackColor="White" />
         </asp:DetailsView>
-        <asp:SqlDataSource ID="Employees" runat="server" ConnectionString="<%$ ConnectionStrings:myDBaseConnectionString %>" DeleteCommand="DELETE FROM [HiredEmployees] WHERE [Id] = @Id" InsertCommand="INSERT INTO [HiredEmployees] ([Id], [Name], [HireDate], [Salary]) VALUES (@Id, @Name, @HireDate, @Salary)" SelectCommand="SELECT [Id], [Name], [HireDate], [Salary] FROM [HiredEmployees]" UpdateCommand="UPDATE [HiredEmployees] SET [Name] = @Name, [HireDate] = @HireDate, [Salary] = @Salary WHERE [Id] = @Id">
+        <asp:SqlDataSource ID="Employees" runat="server" ConnectionString="<%$ ConnectionStrings:myDBaseConnectionString %>" 
+            DeleteCommand="DELETE FROM [HiredEmployees] WHERE [Id] = @Id" 
+            InsertCommand="INSERT INTO [HiredEmployees] ([Id], [Name], [HireDate], [Salary]) VALUES (@Id, @Name, @HireDate, @Salary)" 
+            SelectCommand="SELECT [Id], [Name], [HireDate], [Salary] FROM [HiredEmployees]" 
+            UpdateCommand="UPDATE [HiredEmployees] SET [Name] = @Name, [HireDate] = @HireDate, [Salary] = @Salary WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="Int32" />
             </DeleteParameters>
